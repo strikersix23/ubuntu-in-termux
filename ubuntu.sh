@@ -8,17 +8,16 @@ if [ "$first" != 1 ];then
     if [ ! -f "ubuntu.tar.gz" ]; then
         echo "downloading ubuntu-image"
         if [ "$(dpkg --print-architecture)" = "aarch64" ];then
-            wget \http://cdimage.ubuntu.com/ubuntu-base/daily/current/focal-base-arm64.tar.gz -O ubuntu.tar.gz
+            wget \http://cdimage.ubuntu.com/ubuntu-base/daily/current/groovy-base-arm64.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "arm" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/focal-base-armhf.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/groovy-base-armhf.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "x86_64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/focal-base-amd64.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/groovy-base-amd64.tar.gz -O ubuntu.tar.gz
         elif [ "$(dpkg --print-architecture)" = "i*86" ];then
             wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/focal-base-i386.tar.gz -O ubuntu.tar.gz
-        elif [ "$(dpkg --print-architecture)" = "x86" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/focal-base-i386.tar.gz -O ubuntu.tar.gz
+    
         elif [ "$(dpkg --print-architecture)" = "amd64" ];then
-            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/focal-base-amd64.tar.gz -O ubuntu.tar.gz
+            wget http://cdimage.ubuntu.com/ubuntu-base/daily/current/groovy-base-amd64.tar.gz -O ubuntu.tar.gz
 
 
 
